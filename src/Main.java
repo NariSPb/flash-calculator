@@ -3,7 +3,9 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        int a, b, c = 0;
+        int a = 0;
+        int b = 0;
+        int result = 0;
 
         Scanner scanner = new Scanner(System.in);
         String line = scanner.nextLine();
@@ -62,20 +64,20 @@ public class Main {
         }
 
         switch(operatorPart) {
-            case "+": c = a + b;
+            case "+": result = a + b;
                 break;
-            case "-": c = a - b;
+            case "-": result = a - b;
                 break;
-            case "*": c = a * b;
+            case "*": result = a * b;
                 break;
-            case "/": c = a / b;
+            case "/": result = a / b;
                 break;
         }
 
         if (arabian) {
-            System.out.println(c);
+            System.out.println(result);
         } else {
-            String translated = translateToRome(c);
+            String translated = translateToRome(result);
             System.out.println(translated);
         }
     }
